@@ -48,12 +48,9 @@ jobs:
         npm run build --if-present
         npm run test --if-present
 
-    - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v3
-      with:
-        name: node-app
-        path: .
-
+    - name: Angular Github Actions
+      uses: mayurrawte/github-angular-actions@v1.1.0
+            
   deploy:
     permissions:
       contents: none
