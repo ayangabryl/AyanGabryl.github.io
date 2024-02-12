@@ -1,0 +1,39 @@
+@import "src/scss/commons/utils";
+@import "src/scss/commons/configure";
+
+.card {
+    background: $ayan-gray-700;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        background: linear-gradient(66deg, rgba(0, 0, 0, 0.20) 36.61%, rgba(57, 57, 57, 0.20) 98.64%), $ayan-gray-700;
+    }
+
+    &.gallery {
+        width: calc(100% + 28px)
+    }
+
+    &.maps {
+        background: url("/assets/backgrounds/resume/map.svg");
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    &.jmc {
+        background: url("/assets/backgrounds/resume/jmc.svg");
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    // &.profile {
+    //     background: linear-gradient(66deg, rgba(0, 0, 0, 0.20) 36.61%, rgba(57, 57, 57, 0.20) 98.64%), $ayan-gray-700;
+    // }
+
+    // &.award {
+    //     background: linear-gradient(66deg, rgba(0, 0, 0, 0.20) 36.61%, rgba(57, 57, 57, 0.20) 98.64%), $ayan-gray-700;
+    // }
+}
