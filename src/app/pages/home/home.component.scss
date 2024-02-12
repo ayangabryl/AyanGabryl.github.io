@@ -1,0 +1,35 @@
+@import "src/scss/commons/utils";
+@import "src/scss/commons/configure";
+
+.container {
+    position: relative;
+    
+    @keyframes slideGradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 100%;
+        }
+    }
+    .hello {
+        background: linear-gradient(90deg, #523FC2 15.46%, rgba(157, 134, 164, 0.99) 56.25%, rgba(115, 41, 41, 0.98) 91.71%);
+        background-size: 200% 200%; /* Increase the size of background for the sliding effect */
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: slideGradient 3s infinite; /* Animation name, duration, easing, iteration count */
+    }
+
+    .card {
+        background-color: $ayan-gray-700;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $ayan-gray-600;
+        }
+    }
+}

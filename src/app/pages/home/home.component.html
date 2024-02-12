@@ -1,1 +1,21 @@
-<p>home works!</p>
+<main class="flex flex-col justify-center items-center gap-[76px] w-100 h-100 bg-dark">
+    <section class="component-container full-screen container d-flex flex-column justify-content-center align-items-start gap-5 md:w-[700px] p-[24px]">
+        <div class="d-flex flex-column justify-content-center align-items-start gap-2">
+            <h1 #helloGradient class="hello fs-64 fw-bold">Hello! I'm Ian Gabriel</h1>
+            <h1 class="fs-64 text-gray-600 fw-bold">a frontend dev</h1>
+        </div>
+        <div class="flex items-center flex-col md:flex-row gap-3 md:gap-2 w-full">
+            <ng-container *ngFor="let card of cards">
+                <div routerLink="resume"  #cardElement class="card p-3 flex flex-col justify-between items-center md:items-end w-2/3 md:w-full" style="border-radius: 16px; min-height: 180px;">
+                    <h5 class="text-light fs-14 hidden md:block">{{ card.title }}</h5>
+                    <h5 class="text-light fs-18 md:hidden">{{ card.mobileTitle }}</h5>
+                    <div class="bg-dark p-2 d-flex align-items-center justify-content-center" style="border-radius: 50px;">
+                        <i class="ph ph-{{card.iconName}} text-light text-[32px] md:text-[16px]"></i>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <nav-bar class="hidden md:block"></nav-bar>
+    </section>
+    <app-resume></app-resume>
+</main>
