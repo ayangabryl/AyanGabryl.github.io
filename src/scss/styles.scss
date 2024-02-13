@@ -25,6 +25,8 @@
 @import "bootstrap/scss/helpers";
 @import "bootstrap/scss/utilities";
 
+@import 'customs/bootstrap';
+
 @import "bootstrap/scss/root";
 @import "bootstrap/scss/utilities/api";
 @import "bootstrap/scss/reboot";
@@ -48,6 +50,11 @@
 @import "bootstrap/scss/progress";
 @import "bootstrap/scss/spinners";
 @import 'bootstrap/scss/bootstrap';
+
+//Tailwind
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 // Global styling
 @import 'commons/global';

@@ -1,0 +1,39 @@
+.component-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    &.center {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &.full-width {
+        width: 100%;
+    }
+
+    &.fh {
+        height: 100vh;
+    }
+    &.full-screen {
+        height: 100vh;
+    }
+}
+
+.nav-container {
+    position: absolute;
+    left: torem(-50);
+    bottom: torem(-100);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: torem(16) torem(62);
+    flex-grow: 1;
+    width: torem(805);
+
+    border-radius: 59px;
+    background: $ayan-gray-700
+}
