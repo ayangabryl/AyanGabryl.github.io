@@ -1,0 +1,19 @@
+.btn {
+    border-radius: 50px;
+    &:active {
+        @apply scale-95;
+    }
+    &.primary {
+        background-color: $ayan-gray-700;
+        color: $light;
+        &:hover {
+            border: 1px solid $default-border;
+        }
+
+        &:active {
+            // background-color: $light;
+            color: $light;
+            // border: 1px solid $primary;
+        }
+    }
+}

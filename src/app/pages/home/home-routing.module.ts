@@ -14,7 +14,7 @@ const routes: Routes = [
         pathMatch: 'full' 
       },
       {
-        path: 'resume',
+        path: '#about-me',
         loadChildren: ()=> ResumeComponent,
       },
     ]

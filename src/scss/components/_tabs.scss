@@ -1,17 +1,18 @@
 .nav-bar {
     position: absolute;
-    left: torem(-50);
-    bottom: torem(40);
+    // left: torem(-50);
+    // bottom: torem(40);
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: torem(64);
     width: 100%;
 
     padding: torem(16) torem(62);
     flex-grow: 1;
-    width: torem(805);
+    width: auto;
 
     border-radius: 59px;
     background: $ayan-gray-700;
@@ -30,5 +31,10 @@
             color: $light;
             text-shadow: -3px 15px 25.9px $light;
         }
+    }
+
+    .nav-link.active {
+        color: $light;
+            border-bottom: 2px solid $light;
     }
 }

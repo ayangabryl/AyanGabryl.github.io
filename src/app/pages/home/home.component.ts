@@ -1,5 +1,7 @@
-import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { gsap } from 'gsap';
+import { SharedService } from 'src/app/commons/service/shared.service';
 
 interface Card {
   title: string;
@@ -14,7 +16,7 @@ interface Card {
   host: { class: 'component-container' }
 })
 
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
   @ViewChild('helloGradient') helloGradient!: ElementRef;
   
@@ -37,20 +39,41 @@ export class HomeComponent implements AfterViewInit {
     }
   ];
 
-  constructor() { }
+  constructor(private sharedService: SharedService) {}
+
+  ngOnInit() {
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: any) {
+    // logic to determine the active section based on scroll
+    const section = this.calculateActiveSection();
+    this.sharedService.setActiveSection(section);
+  }
+
+  private calculateActiveSection(): string {
+    let activeSection = '';
+    const sections = document.querySelectorAll('section');
+  
+    for (let i = 0; i < sections.length; i++) {
+      const section = sections[i];
+      const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+      const sectionBottom = sectionTop + section.offsetHeight;
+  
+      if (scrollY >= sectionTop && scrollY < sectionBottom) {
+        activeSection = section.id;
+        break; // Stop the loop once the active section is found
+      }
+    }
+  
+    return activeSection;
+  }
+  
   
   ngAfterViewInit() {
-    this.animateHelloText();
+    // this.animateHelloText();
   }
 
   
-  animateHelloText() {
-    // Animate the gradient text to fade out and the default text to fade in
-    gsap.to(this.helloGradient.nativeElement, { duration: 2, opacity: 1 });
 
-    // After 2 seconds, reverse the animation
-    setTimeout(() => {
-      gsap.to(this.helloGradient.nativeElement, { duration: 2, opacity: 1 });
-    }, 2000);
-  }
 }

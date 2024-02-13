@@ -33,3 +33,13 @@
         }
     }
 }
+
+.nav {
+    position: fixed;
+    white-space: nowrap;
+    top: 50px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

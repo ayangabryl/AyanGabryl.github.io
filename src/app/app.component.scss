@@ -1,0 +1,12 @@
+#cursor-circle {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white; /* Default color */
+    pointer-events: none;
+    transform: translate(-80%, -70%);
+    transition: background-color 0.2s, transform 0.1s, ease-in-out;
+    z-index: 1000;
+  }
+  

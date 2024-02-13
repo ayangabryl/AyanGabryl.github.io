@@ -17,9 +17,9 @@
 </ul> -->
 
 <nav class="nav-bar w-full">
-    <a class="nav-link active" href="#">Intro</a>
-    <a class="nav-link" href="#">About me</a>
-    <a class="nav-link" href="#">Collections</a>
+    <a [class.active]="activeLink === 'intro'" class="nav-link" href="#intro">Intro</a>
+    <a [class.active]="activeLink === 'about-me'" class="nav-link" href="#about-me">About me</a>
+    <!-- <a class="nav-link" href="#">Collections</a>
     <a class="nav-link" href="#">Projects</a>
-    <a class="nav-link" href="#">Contact</a>
+    <a class="nav-link" href="#">Contact</a> -->
 </nav>
