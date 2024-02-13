@@ -10,7 +10,8 @@
     }
 
     &.gallery {
-        width: calc(100% + 28px)
+        // width: calc(100% + 28px);
+        width: 100%;
     }
 
     &.maps {
