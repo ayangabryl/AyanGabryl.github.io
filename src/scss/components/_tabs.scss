@@ -1,0 +1,34 @@
+.nav-bar {
+    position: absolute;
+    left: torem(-50);
+    bottom: torem(40);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    padding: torem(16) torem(62);
+    flex-grow: 1;
+    width: torem(805);
+
+    border-radius: 59px;
+    background: $ayan-gray-700;
+    overflow: hidden;
+
+    .nav-link {
+        color: $ayan-gray-500;
+        background: transparent;
+
+        &.active {
+            color: $light;
+            border-bottom: 2px solid $light;
+        }
+
+        &:hover {
+            color: $light;
+            text-shadow: -3px 15px 25.9px $light;
+        }
+    }
+}
